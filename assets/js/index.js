@@ -49,6 +49,7 @@ const getNumber = () => {
     //    let isInArray = true;
     
     const index = randomIndex(76);
+    return index;
     //    if (numeriEstratti.length === 0){
         //        numeriEstratti.push(index+1)
         //        return;
@@ -64,15 +65,17 @@ const getNumber = () => {
         const pulsantePerEstrarre = document.getElementById("estrai-btn");
         const numbersToCompare = document.querySelectorAll("#numbersContainer > div");
         pulsantePerEstrarre.addEventListener("click", function(e){
-            const numeroEstratto = getNumber();
+            const numeroEstratto = getNumber() + 1;
             for (let i = 0; i < numeriDaEstrarre.length; i++){
                 // Cercare corrispondenza con numeri in HTML
                 const container = numbersToCompare[i];
-                const cellValue = container.childNodes;
-                print(cellValue.innerText);
-
-                // Quando trova corrispondenza, assegnare una classe "estratto"
-                // Colorare la classe col CSS
+                if (numeroEstratto === parseInt(container.innerText)){
+                    container.classList.add("estratto");
+                    container.style.background = "green";
+                    container.style.color = "white";
+                    document.querySelector("input").value = numeroEstratto;
+                    print(numeroEstratto, container, container.innerText)
+                }
             }
         })
     // Determine which number to extract
