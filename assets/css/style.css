@@ -1,0 +1,49 @@
+body {
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(27, 39, 68);
+}
+
+#numbersContainer > div {
+    background-color: white;
+    display: inline-block;
+    width: 16.45%;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    color: black;
+    text-align: center;
+}
+
+#numbersContainer {
+    width: 100%;
+    text-align: center;
+}
+
+#numbersContainer div:hover {
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+#tabellone {
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+#titolo {
+    border-style: none;
+    border-color: white;
+    border-bottom-style: solid;
+    border-width: 1px;
+
+}
+
+.estratto {
+    background-color: darkgreen;
+    color: white;
+}
